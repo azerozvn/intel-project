@@ -1,0 +1,390 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  color: #fff;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  background: rgb(110,28,142); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(110,28,142,1) 0%, rgba(252,136,136,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(110,28,142,1)), color-stop(100%,rgba(252,136,136,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(110,28,142,1) 0%,rgba(252,136,136,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(110,28,142,1) 0%,rgba(252,136,136,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(110,28,142,1) 0%,rgba(252,136,136,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(110,28,142,1) 0%,rgba(252,136,136,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e1c8e', endColorstr='#fc8888',GradientType=0 ); /* IE6-9 */
+
+}
+.site-wrapper-inner {
+ 
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.masthead{
+  position: relative !important;
+  margin: 20px 0 20px 0;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+.logo{
+  
+}
+
+.nav-custom > li{
+  position: relative;
+  margin-left: 15px;
+}
+
+.nav-custom > li > a{
+  background: rgba(255,255,255,0.75);
+  border-right: 0;
+  color: #333;
+  font-weight: bold;  
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+.nav-custom > li > a:after{
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 20px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid rgba(255,255,255,0.75);
+  position: absolute;
+  top: 0; 
+  left: 100%;
+  z-index: 2; 
+}
+
+.nav-custom > li:hover> a{
+  background: rgba(0,209,102,0.75);
+  margin-left: 15px;
+  margin-right: -15px;
+  color: #fff;
+  border-left: 10px solid rgba(255,255,255,0.75);
+}
+
+.nav-custom > li:hover > a:after{
+  border-left-color: rgba(0,209,102,0.75) !important;
+}
+
+.active:after{
+  border-left-color: rgba(0,209,102,0.75) !important;
+}
+
+.active{
+  background: rgba(0,209,102,0.75) !important;
+  color: #fff !important;
+}
+
+.section-box{
+  color: #333;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 0 15px;
+  font-size: 15px;
+  position: relative;
+}
+
+.heading-box{
+  position: relative;
+}
+
+.heading{
+  margin: 0;
+}
+
+.section-hr{
+  margin-top: 10px;
+  border-top: 2px solid #333;
+}
+
+.comment{
+  margin-bottom: 20px;
+}
+
+.cmt-author{
+  margin: 0;
+  font-weight: bold;
+  color: rgba(0,166,81,1);
+}
+
+.view-more{
+  padding-bottom: 20px;
+}
+
+.view-more > button{
+  background: rgba(0,166,81,1);
+}
+
+.view-more > a > button, .btn-custom{
+  background: rgba(0,166,81,1);
+}
+
+.view-more >a > button:hover{
+  color: #fff;
+}
+
+.view-more > a{
+  text-decoration: none;
+}
+
+.img-gallery{
+  width: 200px;
+}
+
+.img-center{
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-custom{
+  position: absolute;
+  right:0; top:0;
+}
+
+.btn-custom, .btn-custom:hover{
+  color: #fff;
+}
+
+.slider-custom{
+  padding-left: 20px;
+}
+
+.dropdown{
+  display: none;
+  margin-left: 15px;
+  list-style-type: disc;
+}
+
+.dropdown>li{
+  width: 80%;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.dropdown>li>a{
+  width: 100%;
+}
+
+.dropdown>li:last-child{
+  margin-bottom: 5px;
+}
+
+.dropdown>li>a:hover{
+  text-decoration: none;
+}
+
+.dropdown>li:hover:after{
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 15px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid rgba(0,209,102,0.75);
+  position: absolute;
+  top: 0; 
+  left: 100%;
+  z-index: 2; 
+}
+
+.dropdown>.bigger:hover:after{
+  border-top: 25px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid rgba(0,209,102,0.75);
+}
+
+.dropdown>li:hover{
+  background: rgba(0,209,102,0.75);
+}
+
+.dropdown-active:hover > .dropdown{
+  display: block;
+}
+
+.semi-bold{
+  font-weight: 600;
+}
+
+.text-heading{
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: -5px;
+  text-decoration: underline;
+}
+
+.text-price{
+  color: red;
+}
+
+.text-note{
+  width: 50%;
+  margin: 15px auto;
+}
+
+.img-post{
+  display: block;
+  width: 400px;
+  margin: 10px auto;
+}
+
+.img-title{
+  display: block;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
